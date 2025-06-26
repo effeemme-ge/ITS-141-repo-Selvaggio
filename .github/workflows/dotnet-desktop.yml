@@ -24,11 +24,11 @@ jobs:
         dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore progetto/ConsoleApp/ConsoleApp.sln
+      run: dotnet restore ConsoleApp/ConsoleApp.sln
 
     - name: Build solution
-      run: dotnet build progetto/ConsoleApp/ConsoleApp.sln --configuration ${{ matrix.configuration }} --no-restore
+      run: dotnet build ConsoleApp/ConsoleApp.sln --configuration ${{ matrix.configuration }} --no-restore
 
     - name: Run tests
-      run: dotnet test progetto/ConsoleApp/ConsoleApp.sln --configuration ${{ matrix.configuration }} --no-build
+      run: dotnet test ConsoleApp/ConsoleApp.sln --configuration ${{ matrix.configuration }} --no-build
 Commenti sul corso
